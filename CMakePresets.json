@@ -1,0 +1,33 @@
+{
+  "version": 6,
+  "cmakeMinimumRequired": { "major": 3, "minor": 24, "patch": 0 },
+  "configurePresets": [
+    {
+      "name": "xcode",
+      "displayName": "Xcode (macOS)",
+      "generator": "Xcode",
+      "binaryDir": "${sourceDir}/build-xcode",
+      "condition": { "type": "equals", "lhs": "${hostSystemName}", "rhs": "Darwin" }
+    },
+    {
+      "name": "vs2022",
+      "displayName": "Visual Studio 2022 (x64)",
+      "generator": "Visual Studio 17 2022",
+      "architecture": "x64",
+      "binaryDir": "${sourceDir}/build-vs",
+      "condition": { "type": "equals", "lhs": "${hostSystemName}", "rhs": "Windows" }
+    },
+    {
+      "name": "ninja",
+      "displayName": "Ninja (any OS, command line / VS Code / CLion)",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build",
+      "cacheVariables": { "CMAKE_BUILD_TYPE": "Debug" }
+    }
+  ],
+  "buildPresets": [
+    { "name": "xcode",  "configurePreset": "xcode",  "configuration": "Debug" },
+    { "name": "vs2022", "configurePreset": "vs2022", "configuration": "Debug" },
+    { "name": "ninja",  "configurePreset": "ninja" }
+  ]
+}

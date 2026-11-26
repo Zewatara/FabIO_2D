@@ -1,5 +1,6 @@
 add_library(Engine STATIC
     src/Engine.cpp
+    src/Engine/Console.cpp
 )
 add_library(Engine::Engine ALIAS Engine)
 

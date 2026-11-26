@@ -4,6 +4,8 @@
 #include <box2d/box2d.h>
 #include <glm/glm.hpp>
 
+#include "Engine/Console.h"
+
 class MyGame : public Engine::Application {
 public:
     MyGame() : Application({"Game", 1280, 720, true}) {}
@@ -31,6 +33,14 @@ private:
 };
 
 int main() {
+
     MyGame game;
+
+    Engine::Console gameConsole = game.GetConsole();
+
+    gameConsole.Log();
+    gameConsole.Warning();
+
+
     return game.Run();
 }

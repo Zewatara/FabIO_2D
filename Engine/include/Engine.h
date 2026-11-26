@@ -2,6 +2,8 @@
 
 #include <string>
 
+#include "Engine/Console.h"
+
 struct SDL_Window;
 
 namespace Engine {
@@ -19,6 +21,8 @@ class Application {
 public:
     explicit Application(ApplicationConfig config = {});
     virtual ~Application();
+
+    Console& GetConsole() { return engineConsole; }
 
     Application(const Application&) = delete;
     Application& operator=(const Application&) = delete;
@@ -44,6 +48,8 @@ private:
     SDL_Window* m_window = nullptr;
     void* m_glContext = nullptr;   // SDL_GLContext
     bool m_running = false;
+
+    Console engineConsole;
 };
 
 } // namespace Engine

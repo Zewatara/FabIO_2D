@@ -1,5 +1,18 @@
 #include <Engine.h>
 
+#include <Graphics/Window.h>
+
+namespace Engine
+{
+    // initializing and shutdown of engine systems ex: logging memory, audio etc
+}
+
+
+
+
+
+
+/*
 #include <glad/glad.h>
 #include <SDL3/SDL.h>
 
@@ -93,3 +106,4 @@ int Application::Run() {
 }
 
 } // namespace Engine
+*/

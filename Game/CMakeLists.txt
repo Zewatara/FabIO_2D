@@ -1,5 +1,5 @@
 add_executable(Game
-    src/main.cpp
+    src/ShooterGame.cpp
 )
 
 target_link_libraries(Game PRIVATE Engine::Engine)

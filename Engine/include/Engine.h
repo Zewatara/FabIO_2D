@@ -1,5 +1,21 @@
 #pragma once
+#include <Graphics/Window.h>
+#include <Engine/Runtime.h>
 
+namespace Engine
+{
+    struct  EngineConfig
+    {
+        WindowParameters window{};
+        //future settings
+        // EX: AudioParameters
+    };
+}
+
+
+
+
+/*
 #include <string>
 
 struct SDL_Window;
@@ -29,7 +45,7 @@ public:
 
 protected:
     virtual void OnInit() {}
-    virtual void OnUpdate(float /*dt*/) {}   // dt in seconds
+    virtual void OnUpdate(float ) {}   // dt in seconds
     virtual void OnRender() {}
     virtual void OnShutdown() {}
 
@@ -47,3 +63,4 @@ private:
 };
 
 } // namespace Engine
+*/

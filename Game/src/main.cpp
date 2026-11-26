@@ -36,11 +36,7 @@ int main() {
 
     MyGame game;
 
-    Engine::Console gameConsole = game.GetConsole();
-
-    gameConsole.Log();
-    gameConsole.Warning();
-
-
+    Engine::Console& gameConsole = game.GetConsole();
+    
     return game.Run();
 }

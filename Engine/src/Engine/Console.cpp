@@ -5,31 +5,21 @@ namespace Engine
 {
     Console::Console()
     {
-        std::cout << "FabIO_2D v000000 -- console started\n";
+        std::cout << colorConsole <<"FabIO_2D Engine -- Console started" << colorDefaultLB;
     }
 
     Console::~Console()
     {
-        std::cout << "FabIO_2D v000000 -- shutting down\n";
+        std::cout << colorConsole << "FabIO_2D Engine -- Console stopping" << colorDefaultLB;
     }
 
-    void Console::Log()
+    void Console::Warning(const std::string& input)
     {
-        std::cout << "Logging\n";
+        std::cout << colorWarning << "[Warning]: " << input << colorDefaultLB;
     }
 
-    void Console::Warning()
+    void Console::Error(const std::string& input)
     {
-        std::cout << "Warning\n";
-    }
-
-    void Console::WriteLine()
-    {
-    	std::cout << "Line\n";
-    }
-
-    void Console::Write()
-    {
-    	std::cout << "Write\n";
+        std::cout << colorError << "[Error]: " << input << colorDefaultLB;
     }
 }

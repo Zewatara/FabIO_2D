@@ -1,5 +1,6 @@
 #include <memory>
 #include "Game.h"
+#include "Engine/Console.h"
 
 namespace
 {
@@ -18,6 +19,8 @@ namespace
 
         void setup(Engine::Runtime& runtime) override
         {
+            runtime.console().System("game setup running...");
+
             // dar bind aos inputs com o input manager
         }
     };

@@ -3,6 +3,7 @@ add_library(Engine STATIC
     src/Graphics/Window.cpp
     src/Core/Runtime.cpp
     src/EntryPoint.cpp
+    src/Engine/Console.cpp
 )
 add_library(Engine::Engine ALIAS Engine)
 

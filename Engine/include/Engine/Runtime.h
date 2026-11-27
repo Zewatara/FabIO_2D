@@ -1,10 +1,10 @@
 #pragma once
 #include <Graphics/Window.h>
+#include <Engine/Console.h>
 #include <cstdint>
 
 namespace Engine
 {
-    
     struct EngineConfig;
     
     struct DeltaTime {
@@ -27,6 +27,7 @@ namespace Engine
         
         void quit() { quitRequested = true; }
 
+        Console& console() { return mainConsole; }
         Window& window() { return mainWindow; }
         const DeltaTime& time() const { return Time; }
         
@@ -40,12 +41,10 @@ namespace Engine
     private:
         bool Init();
         void Shutdown();
-
+        
+        Console mainConsole;
         Window mainWindow;
         bool quitRequested = false;
         DeltaTime Time;
     };
-    
-    
-
 }

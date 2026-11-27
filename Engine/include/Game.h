@@ -1,6 +1,7 @@
 #pragma once
 #include <memory>
 #include <Engine.h>
+#include "Engine/Console.h"
 
 namespace Engine {
 
@@ -13,6 +14,7 @@ namespace Engine {
 		virtual void setup(Runtime&) {}
 		
 		//virtual std::unique_ptr<Level> create_first_level() = 0; // only put when we have a level class
+
 	};
 	
 }

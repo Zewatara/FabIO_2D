@@ -12,6 +12,8 @@ namespace Engine
     
     int Runtime::Run()
     {
+        mainConsole.System("Engine runtime running...");
+
         Uint64 last = SDL_GetPerformanceCounter();
         const double freq = static_cast<double>(SDL_GetPerformanceFrequency());
 
